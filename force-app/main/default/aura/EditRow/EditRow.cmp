@@ -1,0 +1,30 @@
+<aura:component>
+  <aura:attribute name="Field1" type="String" />
+  <aura:attribute name="Field2" type="String" />
+  <aura:attribute name="Field3" type="String" />
+  <aura:attribute name="Field4" type="String" />
+  <aura:attribute name="Field5" type="String" />
+  <aura:attribute name="Field6" type="String" />
+
+  <!-- ROW -->
+  <div class="slds-grid slds-gutters">
+    <div class="slds-col">
+      <lightning:input name="{!v.Field1}" label="{!v.Field1}"/>
+    </div>
+    <div class="slds-col">
+      <lightning:input name="{!v.Field2}" label="{!v.Field2}"/>
+    </div>
+    <div class="slds-col">
+      <lightning:input name="{!v.Field3}" label="{!v.Field3}"/>
+    </div>
+    <div class="slds-col">
+      <lightning:input name="{!v.Field4}" label="{!v.Field4}"/>
+    </div>
+    <div class="slds-col">
+      <lightning:input name="{!v.Field5}" label="{!v.Field5}"/>
+    </div>
+    <div class="slds-col">
+      <lightning:input name="{!v.Field6}" label="{!v.Field6}"/>
+    </div>
+  </div>
+</aura:component>	

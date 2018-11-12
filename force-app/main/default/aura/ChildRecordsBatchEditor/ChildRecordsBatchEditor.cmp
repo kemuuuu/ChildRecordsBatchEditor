@@ -1,0 +1,33 @@
+<aura:component implements="flexipage:availableForRecordHome, force:hasRecordId" 
+                controller="ChildRecordsBatchEditorController">
+  <!-- Attribute -->
+  <aura:attribute name="ChildName" type="String" />
+  <aura:attribute name="Field1" type="String" default="Field1"/>
+  <aura:attribute name="Field2" type="String" default="Field2"/>
+  <aura:attribute name="Field3" type="String" default="Field3"/>
+  <aura:attribute name="Field4" type="String" default="Field4"/>
+  <aura:attribute name="Field5" type="String" default="Field5"/>
+  <aura:attribute name="Field6" type="String" default="Field6"/>
+
+  <aura:attribute name="ChildRecords" type="Object[]"/>
+
+  <!-- Handler -->
+  <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+
+  <lightning:card title="{!v.ChildName}">
+    <div class="slds-m-top_none slds-float_right">
+      <lightning:button label="保存" variant="brand"/>
+    </div>
+    <!-- EditRowsCreater -->
+    <div class="slds-m-horizontal_small">
+      <aura:iteration items="{!v.ChildRecords}" var="rec">
+        <c:EditRow Field1="{!v.Field1}"
+                   Field2="{!v.Field2}"
+                   Field3="{!v.Field3}"
+                   Field4="{!v.Field4}"
+                   Field5="{!v.Field5}"
+                   Field6="{!v.Field6}"/>
+      </aura:iteration>
+    </div>
+  </lightning:card>
+</aura:component>	

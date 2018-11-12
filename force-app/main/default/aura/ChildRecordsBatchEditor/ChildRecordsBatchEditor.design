@@ -1,0 +1,9 @@
+<design:component >
+  <design:attribute name="ChildName" label="対象オブジェクトApi参照名"/>
+  <design:attribute name="Field1" label="項目1"/>
+  <design:attribute name="Field2" label="項目2"/>
+  <design:attribute name="Field3" label="項目3"/>
+  <design:attribute name="Field4" label="項目4"/>
+  <design:attribute name="Field5" label="項目5"/>
+  <design:attribute name="Field6" label="項目6"/>
+</design:component>
