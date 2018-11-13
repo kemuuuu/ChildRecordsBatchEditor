@@ -1,37 +1,25 @@
-<aura:component implements="flexipage:availableForRecordHome, force:hasRecordId" 
-                controller="ChildRecordsBatchEditorController">
-  <!-- Attribute -->
+<aura:component implements="flexipage:availableForRecordHome, force:hasRecordId" controller="ChildRecordsBatchEditorController">
+
   <aura:attribute name="ChildName" type="String" />
-  <aura:attribute name="Field1" type="String" default="undefined"/>
-  <aura:attribute name="Field2" type="String" default="undefined"/>
-  <aura:attribute name="Field3" type="String" default="undefined"/>
-  <aura:attribute name="Field4" type="String" default="undefined"/>
-  <aura:attribute name="Field5" type="String" default="undefined"/>
-  <aura:attribute name="Field6" type="String" default="undefined"/>
-
   <aura:attribute name="ChildRecords" type="Object[]"/>
+  <aura:attribute name="Field1" type="String"/>
+  <aura:attribute name="Field2" type="String"/>
+  <aura:attribute name="Field3" type="String"/>
+  <aura:attribute name="Field4" type="String"/>
+  <aura:attribute name="Field5" type="String"/>
+  <aura:attribute name="Field6" type="String"/>
+  <aura:attribute name="Columns" type="List"/>
 
-  <!-- Handler -->
   <aura:handler name="init" value="{!this}" action="{!c.init}"/>
 
-  <!-- CARD -->
   <lightning:card iconName="standard:opportunity" title="{!v.ChildName}">
-    <!-- EditRowsCreater -->
     <div class="slds-m-horizontal_small">
-      <aura:iteration items="{!v.ChildRecords}" var="rec">
-        <c:EditRow ObjectName="{!v.ChildName}"
-                   Record="{!rec}"
-                   Field1="{!v.Field1}"
-                   Field2="{!v.Field2}"
-                   Field3="{!v.Field3}"
-                   Field4="{!v.Field4}"
-                   Field5="{!v.Field5}"
-                   Field6="{!v.Field6}"/>
-      </aura:iteration>
-    </div>
-    <!-- BUTTON -->
-    <div>
-      <lightning:button label="保存" variant="brand"/>
+      <lightning:datatable
+        keyField="id"
+        data="{! v.ChildRecords }"
+        columns="{! v.Columns }"
+        onsave="{! c.onSave }"
+        hideCheckboxColumn="true"/>
     </div>
   </lightning:card>
 </aura:component>	
