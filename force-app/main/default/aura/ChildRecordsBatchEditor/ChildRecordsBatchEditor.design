@@ -1,9 +1,10 @@
 <design:component >
-  <design:attribute name="ChildName" label="対象オブジェクトApi参照名"/>
-  <design:attribute name="Field1" label="項目1"/>
-  <design:attribute name="Field2" label="項目2"/>
-  <design:attribute name="Field3" label="項目3"/>
-  <design:attribute name="Field4" label="項目4"/>
-  <design:attribute name="Field5" label="項目5"/>
-  <design:attribute name="Field6" label="項目6"/>
+  <design:attribute name="ChildName" label="対象オブジェクトAPI参照名"/>
+  <design:attribute name="RelationName" label="参照項目_API参照名"/>
+  <design:attribute name="Field1" label="項目1_API参照名"/>
+  <design:attribute name="Field2" label="項目2_API参照名"/>
+  <design:attribute name="Field3" label="項目3_API参照名"/>
+  <design:attribute name="Field4" label="項目4_API参照名"/>
+  <design:attribute name="Field5" label="項目5_API参照名"/>
+  <design:attribute name="Field6" label="項目6_API参照名"/>
 </design:component>

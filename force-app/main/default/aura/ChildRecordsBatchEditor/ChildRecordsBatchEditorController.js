@@ -20,11 +20,13 @@
         var f6 = c.get('v.Field6');
         if (f6) columns.push(f6)
 
-        h.initHelper(c, columns);
-        h.fetchRecords(c);
+        h.labelInit(c);
+        h.iconInit(c);
+        h.tableInit(c, columns);
+        h.fetchRecords(c, columns);
     },
 
     onSave: function(c, e, h) {
-        console.log('save')
+        h.saveDatatable(c,e,h);
     }
 })

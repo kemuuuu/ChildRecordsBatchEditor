@@ -9,13 +9,17 @@
   <aura:attribute name="Field5" type="String"/>
   <aura:attribute name="Field6" type="String"/>
   <aura:attribute name="Columns" type="List"/>
+  <aura:attribute name="ChildLabel" type="String"/>
+  <aura:attribute name="IconName" type="String"/>
+  <aura:attribute name="RelationName" type="String"/>
 
   <aura:handler name="init" value="{!this}" action="{!c.init}"/>
 
-  <lightning:card iconName="standard:opportunity" title="{!v.ChildName}">
+  <lightning:card iconName="{!v.IconName}" title="{!v.ChildLabel}">
     <div class="slds-m-horizontal_small">
       <lightning:datatable
-        keyField="id"
+        aura:id="datatable"
+        keyField="Id"
         data="{! v.ChildRecords }"
         columns="{! v.Columns }"
         onsave="{! c.onSave }"
